@@ -48,6 +48,14 @@ public class Usuario {
     @OneToMany(mappedBy = "usuario")
     private List<PresencaAluno> presencas = new ArrayList<>();
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getNome() {
         return nome;
     }

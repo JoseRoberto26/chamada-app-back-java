@@ -10,4 +10,6 @@ public interface ChamadaRepository extends JpaRepository<Chamada, Integer> {
 
     Chamada findFirstByCaptchaAndTurma(String captcha, int turma_id);
 
+    Chamada findFirstByTurmaIdAndExpiradaEqualsFalse(int turma_id);
+
 }
