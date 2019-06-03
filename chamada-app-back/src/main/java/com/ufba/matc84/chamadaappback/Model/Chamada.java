@@ -3,6 +3,8 @@ package com.ufba.matc84.chamadaappback.Model;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "chamada")
@@ -25,6 +27,9 @@ public class Chamada {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "turma_id")
     private Turma turma;
+
+    @OneToMany(mappedBy = "chamada")
+    private List<PresencaAluno> presencas = new ArrayList<>();
 
     public String getCaptcha() {
         return captcha;

@@ -38,7 +38,7 @@ public class Turma {
     private List<Chamada> chamadas = new ArrayList<>();
 
     @OneToMany(mappedBy = "turma")
-    private List<Turma_usuario> usuarios_turma = new ArrayList<>();
+    private List<TurmaUsuario> usuarios_turma = new ArrayList<>();
 
     public List<Chamada> getChamadas() {
         return chamadas;

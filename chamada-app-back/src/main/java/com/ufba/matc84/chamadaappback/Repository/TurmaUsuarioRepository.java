@@ -1,12 +1,12 @@
 package com.ufba.matc84.chamadaappback.Repository;
 
-import com.ufba.matc84.chamadaappback.Model.Turma_usuario;
+import com.ufba.matc84.chamadaappback.Model.TurmaUsuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface TurmaUsuarioRepository extends JpaRepository<Turma_usuario, Integer> {
+public interface TurmaUsuarioRepository extends JpaRepository<TurmaUsuario, Integer> {
 
-    Turma_usuario findAllByUsuario_id(int usuario_id);
+    TurmaUsuario findAllByUsuario_id(int usuario_id);
 
 }

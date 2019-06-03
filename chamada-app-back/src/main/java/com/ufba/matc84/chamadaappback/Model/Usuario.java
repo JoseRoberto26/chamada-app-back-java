@@ -43,7 +43,10 @@ public class Usuario {
     private String senha;
 
     @OneToMany(mappedBy = "usuario")
-    private List<Turma_usuario> turmas_usuario = new ArrayList<>();
+    private List<TurmaUsuario> turmas_usuario = new ArrayList<>();
+
+    @OneToMany(mappedBy = "usuario")
+    private List<PresencaAluno> presencas = new ArrayList<>();
 
     public String getNome() {
         return nome;

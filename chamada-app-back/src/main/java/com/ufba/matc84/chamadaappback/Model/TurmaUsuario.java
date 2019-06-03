@@ -1,14 +1,13 @@
 package com.ufba.matc84.chamadaappback.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
-public class Turma_usuario {
+@Table(name = "turma_usuario")
+public class TurmaUsuario {
 
     @Id
+    @Column(name = "id")
     private int id;
 
     @ManyToOne
